@@ -12,7 +12,7 @@ scons_parameters=["build_prefix="+build_prefix]
 
 
 # platform dependencies
-install_requires = [binary_deps('vplants.mtg'), binary_deps('vplants.stat_tool')]
+install_requires = []#[binary_deps('vplants.mtg'), binary_deps('vplants.stat_tool')]#, binary_deps("boostpython")]
 setup_requires = ['openalea.deploy']
 
 
@@ -31,9 +31,19 @@ if __name__ == '__main__':
           scons_parameters=scons_parameters,
         
           # Packages
-          #packages=
-          #package_dir=
-      
+          #namespace_packages = ["openalea"],
+          #create_namespaces = True,
+          
+          # pure python  packages
+          packages= [ "openalea", 
+                      "openalea.tree_matching"
+                      ],
+          
+          # python packages directory
+          package_dir= { #pkg_name : pj('src','vplants'),
+                         '' : 'src',
+                         },
+
           # Add package platform libraries if any
           include_package_data=True,
           zip_safe=False,

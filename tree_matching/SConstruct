@@ -15,11 +15,15 @@ common_tools = ['vplants.mtg', 'vplants.tool','vplants.plantgl',
 tools = ['alea','install'] + common_tools
 
 env = ALEASolution(options, tools)
+env.Append( CPPPATH = pj( '$build_includedir','tree_matching' ) )
 
 prefix = env['build_prefix']
 
 # Build stage
-SConscript(pj(prefix,"src/cpp/SConscript"),
+SConscript(pj(prefix,"src/branches/SConscript"),
            exports='env')
+
+SConscript( pj(prefix,"src/wrapper/SConscript"),
+            exports={"env":env} )
 
 Default("build")

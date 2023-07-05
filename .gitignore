@@ -1,0 +1,16 @@
+build-scons
+build-cmake
+build
+.ipynb_checkpoints
+*.egg-info
+*~
+*.so
+*.pyc
+*.dblite
+*.ps
+*/doc/html/
+*/doc/latex/
+options.py
+/.project
+.vscode
+test_choicetable.dump

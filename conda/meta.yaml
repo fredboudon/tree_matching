@@ -21,6 +21,7 @@ requirements:
       - python x.x
       - setuptools
       - boost x.x
+      - openalea.mtg
           
   build:
     - python
@@ -34,8 +35,6 @@ requirements:
     - python x.x
     - setuptools
     - boost x.x
-
-  run_constrained:
     - openalea.mtg
 
 test:

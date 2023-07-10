@@ -20,7 +20,7 @@ requirements:
   host:
       - python x.x
       - setuptools
-      - boost 
+      - boost x.x
           
   build:
     - python
@@ -31,9 +31,12 @@ requirements:
     - make                              # [unix]
 
   run:
-      - python x.x
-      - setuptools
-      - boost
+    - python x.x
+    - setuptools
+    - boost x.x
+
+  run_constrained:
+    - openalea.mtg
 
 test:
    requires:

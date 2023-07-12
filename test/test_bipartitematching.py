@@ -37,7 +37,7 @@ def test2():
     res = m.match()
     end =  time.perf_counter()
     print(res)
-    assert res[1] == [(1, 5), (2, 6)]
+    assert sorted(res[1]) == [(1, 5), (2, 6)]
     print(("Elaspsed Time = ",end-start,"seconds"))
 
 
@@ -52,7 +52,7 @@ def test3():
     res = m.match()
     end =  time.perf_counter()
     print(res)
-    assert res[1] == [(1, 5), (2, 4)]
+    assert sorted(res[1]) == [(1, 5), (2, 4)]
     print(("Elaspsed Time = ",end-start,"seconds"))
 
 
@@ -68,7 +68,7 @@ def test_with_capacities():
     res = m.match()
     end =  time.perf_counter()
     print(res)
-    assert res[1] == [(1, 4), (1, 5), (2, 6)]
+    assert sorted(res[1]) == [(1, 4), (1, 5), (2, 6)]
     print(("Elaspsed Time = ",end-start,"seconds"))
 
 

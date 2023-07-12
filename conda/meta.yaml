@@ -20,7 +20,7 @@ requirements:
   host:
       - python x.x
       - setuptools
-      - boost x.x
+      - boost
       - openalea.mtg
           
   build:
@@ -34,8 +34,7 @@ requirements:
   run:
     - python x.x
     - setuptools
-    - boost x.x
-    - openalea.mtg
+    - {{ pin_compatible('boost', max_pin='x.x') }}
 
 test:
    requires:
